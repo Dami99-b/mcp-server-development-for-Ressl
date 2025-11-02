@@ -1,0 +1,2 @@
+This is a sample file.\nTesting the keyword search tool.\nPython makes things easy
+fr!
