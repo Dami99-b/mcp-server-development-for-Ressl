@@ -11,7 +11,7 @@ Instructions:
 
 To use this tool, execute the script in your terminal:
 
-python search_tool.py <filename> <keyword>
+python search_tool.py <filename > <keyword >
 
 Example:
 
