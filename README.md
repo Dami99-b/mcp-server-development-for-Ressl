@@ -1,5 +1,5 @@
 # mcp-server-development-for-Ressl
-As part of an MCP server project, this task implements a basic keyword search tool.
+As part of an MCP server project, this implements a basic keyword search tool.
 
 Features:
 
