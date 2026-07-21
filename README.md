@@ -1,18 +1,18 @@
 # mcp-server-development-for-Ressl
-As part of an MCP server project, this implements a basic keyword search tool.
+A JSON-RPC compliant MCP (Model Context Protocol) server exposing file-search and
+local LLM-triage tools, built with FastMCP.
 
-Features:
+## Tools
 
-It reads a document and looks for a particular keyword.
-It provides the relevant lines along with their positions in the document.
-It aims for an elegant and simple design.
+### `search_keyword(file_path, keyword, case_sensitive=False)`
+Searches a file for a keyword and returns matching lines with line numbers.
+Behavior (max results, default case sensitivity) is configurable via `config.json`.
 
-Instructions:
+### `list_files(directory=".")`
+Lists searchable files in a directory.
 
-To use this tool, execute the script in your terminal:
-
-python search_tool.py <filename > <keyword >
-
-Example:
-
-python search_tool.py sample.txt python
+### `triage_finding(finding_text)`
+Sends a security/audit finding to a **local, offline LLM** for a plain-English
+explanation, severity rating, and suggested fix — no cloud API call, no data
+leaves the machine. Requires a local `llama-server` instance running first
+(see [llama.cpp](https://github.com/ggml-org/llama.cpp)):
