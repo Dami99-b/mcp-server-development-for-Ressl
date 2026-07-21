@@ -1,4 +1,5 @@
 {
   "max_results": 50,
-  "case_sensitive": false
+  "case_sensitive": false,
+  "llama_server_url": "http://127.0.0.1:8080"
 }
